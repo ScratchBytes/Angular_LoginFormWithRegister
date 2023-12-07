@@ -1,0 +1,52 @@
+.register-content {
+    width: 100%;
+    height: 100%;
+}
+
+mat-card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    top: 8%;
+}
+
+.backButton {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #6D42BA;
+}
+
+.backButton h3 {
+    font-size: 20px;
+    margin-top: -3px;
+    margin-left: 5px;
+    font-family: 'Zilla Slab', serif;
+}
+
+mat-icon {
+    font-weight: 900;
+    vertical-align: middle;
+}
+
+mat-label {
+    font-family: 'Poppins', sans-serif;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.age, .gender{
+    width: 48%;
+}
+
+.age {
+    margin-right: 4%;
+}
+
+.button {
+    width: 100%;
+}

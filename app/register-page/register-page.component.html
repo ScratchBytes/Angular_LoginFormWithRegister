@@ -1,0 +1,65 @@
+<div class="register-content">
+    <mat-card>
+        <mat-card-content>
+            <button class="backButton"
+                    routerLink="/Login">
+                <mat-icon mat-icon>keyboard_backspace</mat-icon><h3>BACK</h3>
+            </button>
+            <form #registerForm="ngForm"
+                  [formGroup]="registerform"
+                  (ngSubmit)="register(registerForm.value)">
+                <div class="register-form">
+                    <div class="personal-info">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Given Name</mat-label>
+                            <input  matInput
+                                    type="text"
+                                    formControlName="firstName">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input  matInput
+                                    type="text"
+                                    formControlName="lastName">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline"
+                                        class="age">
+                            <mat-label>Age</mat-label>
+                            <input  matInput
+                                    type="number"
+                                    formControlName="age">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline"
+                                        class="gender">
+                            <mat-label>Gender</mat-label>
+                            <mat-select formControlName="gender">
+                                <mat-option value="Male">Male</mat-option>
+                                <mat-option value="Female">Female</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="account-info">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input  matInput
+                                    type="text"
+                                    formControlName="id">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input  matInput
+                                    type="text"
+                                    formControlName="passkey">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button mat-raised-button 
+                            color="warn"
+                            class="button"
+                            type="submit"
+                            [disabled]="!registerform.valid">SUBMIT
+                </button>
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>

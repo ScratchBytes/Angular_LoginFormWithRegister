@@ -1,0 +1,49 @@
+<div class="login-content">
+    <mat-card>
+        <mat-card-content>
+            <h1>LOGIN</h1>
+            <form #loginForm="ngForm" 
+                  [formGroup]="loginform" 
+                  (ngSubmit)="login(loginForm.value)">
+                <div class="login-forms">
+                    <div class="user-form">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input  matInput
+                                    type="text"
+                                    formControlName="id"
+                                    required>
+                        </mat-form-field>
+                    </div>
+                    <div class="pass-form">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input  matInput
+                                    [type]="hide ? 'password' : 'text'"
+                                    [(ngModel)]="showValue"
+                                    formControlName="passkey"
+                                    required>
+                            <button matSuffix
+                                    class="showPass"
+                                    (click)="hide = !hide"
+                                    *ngIf="showValue">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <button mat-raised-button 
+                            color="primary"
+                            class="button"
+                            type="submit">LOGIN
+                    </button>
+                </div>
+            </form>
+                <br><h3 class="hr-lines"> OR </h3>
+                <button mat-raised-button 
+                        color="warn"
+                        class="button"
+                        routerLink="/Register">SIGN UP
+                </button>
+        </mat-card-content>
+    </mat-card>
+</div>
